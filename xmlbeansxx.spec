@@ -1,4 +1,3 @@
-#
 %bcond_with	log4cxx
 Summary:	Library used by code generated with xmlbeansxx-generator
 Summary(pl.UTF-8):	Biblioteka wykorzystywana przez kod wygenerowany przez xmlbeansxx-generator
@@ -9,6 +8,7 @@ License:	Apache
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/template/%{name}-%{version}.tar.gz
 # Source0-md5:	1afc11b9703f7f447e2cd4e7d2ec21e8
+Patch0:		%{name}-log4cxxdep.patch
 URL:		http://xmlbeansxx.touk.pl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -18,8 +18,6 @@ BuildRequires:	gmp-c++-devel
 %{?with_log4cxx:BuildRequires:	log4cxx-devel >= 0.10.0}
 BuildRequires:	maven
 BuildRequires:	xerces-c-devel
-Patch0:		%{name}-log4cxxdep.patch
-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,8 +28,8 @@ xmlbeansxx-generator. You may also need a xmlbeansxx-generator
 package.
 
 %description -l pl.UTF-8
-xmlbeansxx jest technologią dostępu do danych zawartych w plikach
-XML poprzez wiązanie danych XML z klasami C++. Biblioteka ta jest
+xmlbeansxx jest technologią dostępu do danych zawartych w plikach XML
+poprzez wiązanie danych XML z klasami C++. Biblioteka ta jest
 wzorowana na bibliotece Apache XMLBeans. Ten pakiet zawiera biblioteki
 wykorzystywane przez kod wygenerowany przy użyciu narzędzi z pakietu
 xmlbeansxx-generator.
@@ -106,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libxmlbeansxx.so.4.0.1
+%attr(755,root,root) %{_libdir}/libxmlbeansxx.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxmlbeansxx.so.4
 
 %files static
@@ -123,10 +121,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/bin
-%{_bindir}/scompxx
-%{_bindir}/xmlbeansxx-gen
-%{_bindir}/xmlbeansxx-geninclude
-%{_bindir}/xmlbeansxx-split
+%attr(755,root,root) %{_bindir}/scompxx
+%attr(755,root,root) %{_bindir}/xmlbeansxx-gen
+%attr(755,root,root) %{_bindir}/xmlbeansxx-geninclude
+%attr(755,root,root) %{_bindir}/xmlbeansxx-split
 
 %{_datadir}/%{name}/xmlbeansxx-gen.jar
 
@@ -136,5 +134,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/%{name}/bin/xmlbeansxx-split
 %attr(755,root,root) %{_datadir}/%{name}/bin/xmlvalidator
 %{_datadir}/%{name}/bin/acx_pthread.m4
-
 %{_datadir}/%{name}/lib
