@@ -6,7 +6,7 @@ Version:	0.9.2
 Release:	0.1
 License:	Apache
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/template/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
 # Source0-md5:	1afc11b9703f7f447e2cd4e7d2ec21e8
 Patch0:		%{name}-log4cxxdep.patch
 URL:		http://xmlbeansxx.touk.pl/
