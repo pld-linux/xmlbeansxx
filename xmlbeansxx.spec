@@ -2,13 +2,12 @@
 Summary:	Library used by code generated with xmlbeansxx-generator
 Summary(pl.UTF-8):	Biblioteka wykorzystywana przez kod wygenerowany przez xmlbeansxx-generator
 Name:		xmlbeansxx
-Version:	0.9.2
+Version:	0.9.5
 Release:	0.1
 License:	Apache
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
-# Source0-md5:	1afc11b9703f7f447e2cd4e7d2ec21e8
-Patch0:		%{name}-log4cxxdep.patch
+# Source0-md5:	dcef5d96807ace83aeae34c38eb857a7
 URL:		http://xmlbeansxx.touk.pl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -82,7 +81,6 @@ schematowi xsd.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 ./bootstrap
@@ -105,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libxmlbeansxx.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxmlbeansxx.so.4
+%attr(755,root,root) %ghost %{_libdir}/libxmlbeansxx.so.5
 
 %files static
 %defattr(644,root,root,755)
