@@ -27,8 +27,8 @@ xmlbeansxx-generator. You may also need a xmlbeansxx-generator
 package.
 
 %description -l pl.UTF-8
-xmlbeansxx jest technologią dostępu do danych zawartych w plikach XML
-poprzez wiązanie danych XML z klasami C++. Biblioteka ta jest
+xmlbeansxx jest technologią dostępu do danych zawartych w plikach
+XML poprzez wiązanie danych XML z klasami C++. Biblioteka ta jest
 wzorowana na bibliotece Apache XMLBeans. Ten pakiet zawiera biblioteki
 wykorzystywane przez kod wygenerowany przy użyciu narzędzi z pakietu
 xmlbeansxx-generator.
@@ -63,12 +63,14 @@ Statyczna biblioteka xmlbeansxx.
 Summary:	xmlbeansxx C++ class generator
 Summary(pl.UTF-8):	Generator klas C++
 Group:		Development/Tools
+BuildRequires:	jdk >= 1.4
 BuildRequires:	jpackage-utils
 BuildRequires:	maven
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	bash
 Requires:	jpackage-utils
+Requires:	jre >= 1.4
 
 %description generator
 This package contains a java utility that generates C++ classes for
