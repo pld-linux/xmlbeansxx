@@ -63,6 +63,7 @@ Statyczna biblioteka xmlbeansxx.
 Summary:	xmlbeansxx C++ class generator
 Summary(pl.UTF-8):	Generator klas C++
 Group:		Development/Tools
+BuildRequires:	jar
 BuildRequires:	jdk >= 1.4
 BuildRequires:	jpackage-utils
 BuildRequires:	maven
