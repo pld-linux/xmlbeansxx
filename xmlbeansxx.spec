@@ -9,11 +9,12 @@ Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
 # Source0-md5:	1be9ce3c7169816bcd9d6359f7752598
 URL:		http://xmlbeansxx.touk.pl/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	cppunit-devel
 BuildRequires:	gmp-c++-devel
+BuildRequires:	libtool >= 2:1.4d
 %{?with_log4cxx:BuildRequires:	log4cxx-devel >= 0.10.0}
 BuildRequires:	maven
 BuildRequires:	xerces-c-devel
