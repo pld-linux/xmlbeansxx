@@ -87,7 +87,11 @@ schematowi xsd.
 %setup -q
 
 %build
-./bootstrap
+%{__libtoolize}
+%{__aclocal} -I m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
   %{!?with_log4cxx:--disable-log4cxx}
 %{__make}
