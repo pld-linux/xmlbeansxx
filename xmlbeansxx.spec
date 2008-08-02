@@ -1,4 +1,5 @@
 %bcond_with	log4cxx
+%bcond_with	gmpxx
 Summary:	Library used by code generated with xmlbeansxx-generator
 Summary(pl.UTF-8):	Biblioteka wykorzystywana przez kod wygenerowany przez xmlbeansxx-generator
 Name:		xmlbeansxx
@@ -13,7 +14,7 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	cppunit-devel
-BuildRequires:	gmp-c++-devel
+%{?with_gmpxx:BuildRequires:	gmp-c++-devel}
 BuildRequires:	libtool >= 2:1.4d
 %{?with_log4cxx:BuildRequires:	log4cxx-devel >= 0.10.0}
 BuildRequires:	maven
@@ -93,7 +94,8 @@ schematowi xsd.
 %{__autoheader}
 %{__automake}
 %configure \
-  %{!?with_log4cxx:--disable-log4cxx}
+  %{!?with_log4cxx:--disable-log4cxx} \
+  %{!?with_gmpxx:--disable-gmpxx}
 %{__make}
 
 %install
