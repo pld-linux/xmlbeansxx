@@ -3,12 +3,12 @@
 Summary:	Library used by code generated with xmlbeansxx-generator
 Summary(pl.UTF-8):	Biblioteka wykorzystywana przez kod wygenerowany przez xmlbeansxx-generator
 Name:		xmlbeansxx
-Version:	0.9.7
+Version:	0.9.8
 Release:	0.1
 License:	Apache
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
-# Source0-md5:	476ba33a307b4275825e8950ff749fad
+# Source0-md5:	969ba90bd8113c712f1ce525883b1541
 URL:		http://xmlbeansxx.touk.pl/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
