@@ -29,8 +29,8 @@ xmlbeansxx-generator. You may also need a xmlbeansxx-generator
 package.
 
 %description -l pl.UTF-8
-xmlbeansxx jest technologią dostępu do danych zawartych w plikach
-XML poprzez wiązanie danych XML z klasami C++. Biblioteka ta jest
+xmlbeansxx jest technologią dostępu do danych zawartych w plikach XML
+poprzez wiązanie danych XML z klasami C++. Biblioteka ta jest
 wzorowana na bibliotece Apache XMLBeans. Ten pakiet zawiera biblioteki
 wykorzystywane przez kod wygenerowany przy użyciu narzędzi z pakietu
 xmlbeansxx-generator.
@@ -114,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libxmlbeansxx.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxmlbeansxx.so.5
+%doc ChangeLog
 
 %files static
 %defattr(644,root,root,755)
