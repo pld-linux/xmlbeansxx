@@ -40,6 +40,7 @@ Summary:	Header files for xmlbeansxx library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki xmlbeansxx
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xerces-c-devel
 Suggests:	%{name}-generator = %{version}-%{release}
 
 %description devel
