@@ -9,7 +9,7 @@ License:	Apache
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
 # Source0-md5:	969ba90bd8113c712f1ce525883b1541
-URL:		http://xmlbeansxx.touk.pl/
+URL:		http://top.touk.pl/display/top/xmlbeansxx
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	boost-devel >= 1.35.0
