@@ -7,7 +7,7 @@ Version:	0.9.8
 Release:	0.1
 License:	Apache
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/xmlbeansxx/%{name}-%{version}.tar.gz
 # Source0-md5:	969ba90bd8113c712f1ce525883b1541
 URL:		http://top.touk.pl/display/top/xmlbeansxx
 BuildRequires:	autoconf >= 2.60
@@ -15,9 +15,14 @@ BuildRequires:	automake
 BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	cppunit-devel
 %{?with_gmpxx:BuildRequires:	gmp-c++-devel}
+BuildRequires:	jar
+BuildRequires:	jdk >= 1.4
+BuildRequires:	jpackage-utils
 BuildRequires:	libtool >= 2:1.4d
 %{?with_log4cxx:BuildRequires:	log4cxx-devel >= 0.10.0}
 BuildRequires:	maven
+BuildRequires:	rpm-javaprov
+BuildRequires:	rpmbuild(macros) >= 1.300
 BuildRequires:	xerces-c-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -66,12 +71,6 @@ Statyczna biblioteka xmlbeansxx.
 Summary:	xmlbeansxx C++ class generator
 Summary(pl.UTF-8):	Generator klas C++
 Group:		Development/Tools
-BuildRequires:	jar
-BuildRequires:	jdk >= 1.4
-BuildRequires:	jpackage-utils
-BuildRequires:	maven
-BuildRequires:	rpm-javaprov
-BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	bash
 Requires:	jpackage-utils
 Requires:	jre >= 1.4
